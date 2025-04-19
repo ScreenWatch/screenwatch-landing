@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ScreenWatch – Live Camera Display Made Simple</title>
+  <link rel="icon" type="image/png" href="screenwatch-logo.png">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,14 +19,24 @@
       padding: 40px 20px;
       text-align: center;
     }
+    .header-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+    .header-logo img {
+      height: 50px;
+    }
     header h1 {
       font-size: 2.5em;
-      margin-bottom: 10px;
+      margin: 0;
     }
     header p {
       font-size: 1.2em;
       max-width: 600px;
-      margin: 0 auto;
+      margin: 10px auto 0;
     }
     .features {
       display: flex;
@@ -81,7 +92,10 @@
 </head>
 <body>
   <header>
-    <h1>ScreenWatch</h1>
+    <div class="header-logo">
+      <img src="screenwatch-logo.png" alt="ScreenWatch Logo">
+      <h1>ScreenWatch</h1>
+    </div>
     <p>Turn any screen into a live security display – no browser, no cloud, no hassle.</p>
   </header>
 
