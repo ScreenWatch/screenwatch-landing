@@ -65,6 +65,10 @@
       border-radius: 4px;
       cursor: pointer;
     }
+    .success {
+      color: green;
+      margin-top: 20px;
+    }
     footer {
       text-align: center;
       font-size: 0.9em;
@@ -101,14 +105,46 @@
   <section class="cta">
     <h2>Want to try ScreenWatch?</h2>
     <p>Enter your email to join the beta list and be the first to know when it's ready:</p>
-    <form action="https://formspree.io/f/xjkynybj" method="POST">
-      <input type="email" placeholder="you@example.com" required />
+    <form id="betaForm">
+      <input type="email" name="email" id="emailInput" placeholder="you@example.com" required />
       <button type="submit">Join Beta</button>
     </form>
+    <div id="successMessage" class="success" style="display:none;">Thank you! You've been added to the beta list.</div>
   </section>
 
   <footer>
     &copy; 2025 ScreenWatch. A simple idea built for home security tinkerers.
   </footer>
+
+  <script>
+    const form = document.getElementById('betaForm');
+    const emailInput = document.getElementById('emailInput');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = emailInput.value;
+
+      try {
+        const res = await fetch('https://formspree.io/f/xjkynybj', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({ email }),
+        });
+
+        if (res.ok) {
+          successMessage.style.display = 'block';
+          form.reset();
+        } else {
+          alert('There was a problem submitting the form. Please try again later.');
+        }
+      } catch (err) {
+        alert('Submission failed. Check your internet connection or try again.');
+      }
+    });
+  </script>
 </body>
 </html>
