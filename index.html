@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScreenWatch – Live Camera Display Made Simple</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9fafb;
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #111827;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+    .feature {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      max-width: 300px;
+    }
+    .feature h3 {
+      margin-top: 0;
+    }
+    .cta {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .cta input[type=email] {
+      padding: 10px;
+      font-size: 1em;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .cta button {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin-left: 10px;
+      border: none;
+      background-color: #111827;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ScreenWatch</h1>
+    <p>Turn any screen into a live security display – no browser, no cloud, no hassle.</p>
+  </header>
+
+  <section class="features">
+    <div class="feature">
+      <h3>🔌 Plug & Play</h3>
+      <p>Just power up your Raspberry Pi and ScreenWatch displays your camera feed automatically.</p>
+    </div>
+    <div class="feature">
+      <h3>🔒 Local-Only</h3>
+      <p>No cloud required. Streams directly from your local network to your screen.</p>
+    </div>
+    <div class="feature">
+      <h3>📷 RTSP-Compatible</h3>
+      <p>Supports most IP cameras using the standard RTSP protocol.</p>
+    </div>
+    <div class="feature">
+      <h3>🛠️ Simple Setup</h3>
+      <p>Configure your stream in a text file – or use our optional local web tool (coming soon).</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Want to try ScreenWatch?</h2>
+    <p>Enter your email to join the beta list and be the first to know when it's ready:</p>
+    <form>
+      <input type="email" placeholder="you@example.com" required />
+      <button type="submit">Join Beta</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 ScreenWatch. A simple idea built for home security tinkerers.
+  </footer>
+</body>
+</html>
